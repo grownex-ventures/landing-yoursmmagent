@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { APP_URL } from "@/lib/site";
+import { LOGIN_URL, TRIAL_URL } from "@/lib/site";
 import Reveal from "./Reveal";
 
 export default function FinalCTA() {
@@ -30,14 +30,19 @@ export default function FinalCTA() {
                             </p>
                             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
                                 <a
-                                    href={APP_URL}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    href={TRIAL_URL}
                                     data-testid="final-cta-get-started-button"
                                     className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-indigo-700 shadow-[0_14px_36px_-12px_rgba(0,0,0,0.35)] transition-all duration-200 hover:bg-indigo-50 active:scale-[0.98]"
                                 >
-                                    Get Started with YourSMMagent
+                                    Start Free with Your SMM Agent
                                     <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                                </a>
+                                <a
+                                    href={LOGIN_URL}
+                                    data-testid="final-cta-login-button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/20 active:scale-[0.98]"
+                                >
+                                    Log In
                                 </a>
                             </div>
                             <a

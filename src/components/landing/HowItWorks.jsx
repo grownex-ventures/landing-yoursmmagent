@@ -70,12 +70,12 @@ export default function HowItWorks() {
 
                 <Reveal delay={0.15} className="mt-14 text-center">
                     <PrimaryCTA testId="how-it-works-get-started-button">
-                        Get Started
+                        Start Free
                         <ArrowCta />
                     </PrimaryCTA>
                     <p className="mt-3 inline-flex items-center gap-1.5 text-xs text-slate-400">
                         <ArrowRight className="h-3 w-3" />
-                        Opens the YourSMMagent application
+                        Request a free trial for Your SMM Agent
                     </p>
                 </Reveal>
             </div>

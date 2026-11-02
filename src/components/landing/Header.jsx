@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Menu, X } from "lucide-react";
-import { APP_URL, NAV_LINKS } from "@/lib/site";
+import { LOGIN_URL, TRIAL_URL, NAV_LINKS } from "@/lib/site";
 import { Logo } from "./Logo";
 
 export default function Header() {
@@ -41,22 +41,18 @@ export default function Header() {
 
                 <div className="hidden items-center gap-3 lg:flex">
                     <a
-                        href={APP_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href={LOGIN_URL}
                         data-testid="header-login-link"
                         className="rounded-full px-4 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-900"
                     >
                         Log In
                     </a>
                     <a
-                        href={APP_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href={TRIAL_URL}
                         data-testid="header-get-started-button"
                         className="group inline-flex items-center gap-1.5 rounded-full bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(79,70,229,0.55)] transition-all duration-200 hover:bg-indigo-500 active:scale-[0.98]"
                     >
-                        Get Started
+                        Start Free
                         <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
                     </a>
                 </div>
@@ -96,22 +92,18 @@ export default function Header() {
                             ))}
                             <div className="flex gap-3 pt-3">
                                 <a
-                                    href={APP_URL}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    href={LOGIN_URL}
                                     data-testid="mobile-login-link"
                                     className="flex-1 rounded-full border border-slate-300 px-5 py-3 text-center text-sm font-semibold text-slate-700"
                                 >
                                     Log In
                                 </a>
                                 <a
-                                    href={APP_URL}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    href={TRIAL_URL}
                                     data-testid="mobile-get-started-button"
                                     className="flex-1 rounded-full bg-indigo-600 px-5 py-3 text-center text-sm font-semibold text-white"
                                 >
-                                    Get Started
+                                    Start Free
                                 </a>
                             </div>
                         </nav>

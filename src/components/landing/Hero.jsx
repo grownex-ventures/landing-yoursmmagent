@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { MessagesSquare, Sparkles, Target, Workflow } from "lucide-react";
 import { ArrowCta, PrimaryCTA, SecondaryCTA } from "./Buttons";
+import { LOGIN_URL, TRIAL_URL } from "@/lib/site";
 import HeroConsole from "./HeroConsole";
 
 const line1 = [{ t: "AI Customer Support," }];
@@ -83,7 +84,7 @@ export default function Hero() {
                     >
                         Turn repetitive customer questions into smarter support conversations.
                         YourSMMagent brings AI-powered assistance to your SMM panel through website
-                        chat, Telegram, WhatsApp, and connected support workflows.
+                        chat, Telegram, and connected support workflows.
                     </motion.p>
 
                     <motion.div
@@ -92,12 +93,12 @@ export default function Hero() {
                         transition={{ duration: 0.7, delay: 0.52 }}
                         className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
                     >
-                        <PrimaryCTA testId="hero-get-started-button" className="w-full sm:w-auto">
-                            Get Started
+                        <PrimaryCTA testId="hero-get-started-button" href={TRIAL_URL} className="w-full sm:w-auto">
+                            Start Free
                             <ArrowCta />
                         </PrimaryCTA>
-                        <SecondaryCTA testId="hero-explore-features-link" href="#features" className="w-full sm:w-auto">
-                            Explore Features
+                        <SecondaryCTA testId="hero-login-link" href={LOGIN_URL} external={false} className="w-full sm:w-auto">
+                            Login
                         </SecondaryCTA>
                     </motion.div>
 

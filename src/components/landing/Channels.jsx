@@ -35,6 +35,7 @@ const BLOCKS = [
         id: "whatsapp",
         icon: Phone,
         chip: "WhatsApp AI Customer Support",
+        comingSoon: true,
         title: "WhatsApp AI Support for SMM Panel Businesses",
         text: "Offer assistance through one of the most familiar messaging channels in the world. Through supported WhatsApp Business integrations, the AI agent answers common inquiries and follows your configured support flows — with channel-specific requirements and permissions set up as part of the integration.",
         points: [
@@ -53,10 +54,17 @@ function ChannelBlock({ block, index }) {
     return (
         <article className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <Reveal className={flip ? "lg:order-2" : ""}>
-                <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-indigo-600 shadow-sm">
-                    <Icon className="h-3.5 w-3.5" />
-                    {chip}
-                </span>
+                <div className="flex flex-wrap items-center gap-2.5">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-indigo-600 shadow-sm">
+                        <Icon className="h-3.5 w-3.5" />
+                        {chip}
+                    </span>
+                    {block.comingSoon && (
+                        <span className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-700">
+                            Coming Soon
+                        </span>
+                    )}
+                </div>
                 <h3 className="mt-4 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{title}</h3>
                 <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">{text}</p>
                 <ul className="mt-6 space-y-2.5">
